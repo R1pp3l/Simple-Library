@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Concert One", cursive;
+}
+
+.container {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 0.1fr 2.8fr 0.1fr;
+  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header"
+    ". content ."
+    "footer footer footer";
+}
+/*-------------------Header----------------------*/
+.header {
+  grid-area: header;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2vh;
+  color: #d2d2d2;
+  background-color: #292929;
+}
+
+.main-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.main-title {
+  font-size: 3rem;
+}
+
+#book-logo {
+  width: 3vw;
+  height: auto;
+}
+
+.add-button {
+  margin-top: 10px;
+  font-family: "Concert One", cursive;
+  border-color: yellow;
+  background-color: #121212;
+  border-radius: 10px;
+  padding: 0.5em;
+  font-size: 1.3rem;
+  color: #d2d2d2;
+}
+
+.plus-symbol {
+  color: yellow;
+}
+
+.book-count-list {
+  list-style: none;
+  font-size: 1.5rem;
+}
+/*-------------------Content----------------------*/
+.content {
+  border: 1px solid blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: content;
+}
+
+.cards-cell {
+  border: 1px solid blueviolet;
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  border: 1px solid brown;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+}
+
+.card-list {
+  list-style: none;
+  justify-content: center;
+}
+/*-------------------Footer----------------------*/
+.footer {
+  border: 1px solid green;
+  grid-area: footer;
+}
