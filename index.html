@@ -49,20 +49,27 @@
       </div>
       <div class="footer"></div>
     </div>
-    <div class="hidden-prompt">
-      <form>
-        <label for="Title">Title</label>
-        <input type="text" name="title" id="title-input" />
-        <label for="Author">Author</label>
-        <input type="text" name="author" id="author-input" />
-        <label for="Pages">Pages</label>
-        <input type="number" name="pages" id="pages-input" />
-        <label for="Status">Status</label>
-        <select name="status" id="status-read">
-          <option value="read">Read</option>
-          <option value="notRead">Not Read</option>
-        </select>
-      </form>
+
+    <div id="modal">
+      <div id="modal-content">
+        <form>
+          <label for="title-input">Title:</label>
+          <input type="text" name="title" id="title-input" />
+          <label for="author-input">Author:</label>
+          <input type="text" name="author" id="author-input" />
+          <label for="pages-input">Pages:</label>
+          <input type="number" name="pages" id="pages-input" />
+          <label for="status-read">Status:</label>
+          <select name="status" id="status-read">
+            <option value="read">Read</option>
+            <option value="notRead">Not Read</option>
+          </select>
+          <button type="submit">Add Book</button>
+        </form>
+        <div class="hidden-prompt">
+          <button id="add-book-button">Add Book</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
