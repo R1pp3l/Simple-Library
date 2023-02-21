@@ -22,7 +22,6 @@ body {
 /*-------------------Header----------------------*/
 .header {
   grid-area: header;
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,6 +30,9 @@ body {
   background-color: #292929;
 }
 
+.header-title-image {
+  margin-left: 12px;
+}
 .main-list {
   list-style: none;
   display: flex;
@@ -42,6 +44,7 @@ body {
 }
 
 #book-logo {
+  margin-top: 12px;
   width: 3vw;
   height: auto;
 }
@@ -62,6 +65,8 @@ body {
 }
 
 .book-count-list {
+  margin-right: 10px;
+  display: flex;
   list-style: none;
   font-size: 1.5rem;
 }
@@ -101,3 +106,4 @@ body {
   border: 1px solid green;
   grid-area: footer;
 }
+/*-------------------Hidden custom prompt----------------------*/
