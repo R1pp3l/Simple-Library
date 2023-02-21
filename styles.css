@@ -3,21 +3,27 @@
   padding: 0;
 }
 
+html {
+  min-height: 100%;
+}
 body {
   min-height: 100vh;
   font-family: "Concert One", cursive;
 }
 
 .container {
+  border: 1px solid blue;
   display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 0.1fr 2.8fr 0.1fr;
-  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  height: 100vh;
+  grid-template-columns: 0.4fr 1.7fr 1.9fr 2.3fr 0.4fr;
+  grid-template-rows: 0.5fr 1.3fr 1.4fr 1.4fr 0.4fr;
   gap: 0px 0px;
   grid-template-areas:
-    "header header header"
-    ". content ."
-    "footer footer footer";
+    "header header header header header"
+    ". content content content ."
+    ". content content content ."
+    ". content content content ."
+    ". content content content .";
 }
 /*-------------------Header----------------------*/
 .header {
@@ -72,27 +78,35 @@ body {
 }
 /*-------------------Content----------------------*/
 .content {
-  border: 1px solid blue;
+  border: 1px solid red;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  overflow: auto;
+  grid-template-columns: repeat(3, 515.4px);
+  grid-template-rows: repeat(3, 300px);
+  grid-auto-rows: 300px;
   gap: 0px 0px;
   grid-template-areas:
     ". . ."
     ". . ."
     ". . .";
   grid-area: content;
+  align-items: center;
 }
 
 .cards-cell {
+  height: 100%;
   border: 1px solid blueviolet;
   display: flex;
   justify-content: center;
 }
 
 .cards {
+  text-align: left;
+  padding: 7em;
+  border-radius: 15px;
   border: 1px solid brown;
-  width: 20vw;
+  width: 10vw;
+  height: auto;
   display: flex;
   justify-content: center;
 }
@@ -103,8 +117,11 @@ body {
 }
 /*-------------------Footer----------------------*/
 .footer {
+  display: flex;
   border: 1px solid green;
-  grid-area: footer;
+  margin-top: auto;
+  bottom: 0;
+  height: 10vh;
 }
 /*-------------------Hidden custom prompt----------------------*/
 #modal {
